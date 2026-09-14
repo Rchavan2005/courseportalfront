@@ -1,0 +1,732 @@
+/* =====================================================
+   INSTRUCTOR DASHBOARD
+===================================================== */
+
+.instructor-dashboard {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--background);
+
+  padding: 45px 50px 70px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.instructor-hero {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto 35px;
+
+  min-height: 250px;
+
+  padding: 42px 48px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  background: linear-gradient(
+    135deg,
+    #e8f3ef,
+    #dceee8
+  );
+
+  border: 1px solid #d4e3de;
+
+  border-radius: 24px;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+  flex: 1;
+}
+
+
+.dashboard-tag {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: var(--primary);
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.hero-content h1 {
+  margin: 0;
+
+  color: var(--text-dark);
+
+  font-size: clamp(42px, 5vw, 65px);
+
+  line-height: 1.1;
+
+  font-weight: 700;
+}
+
+
+.hero-content h1 span {
+  color: var(--primary);
+}
+
+
+.hero-content p {
+  max-width: 700px;
+
+  margin: 18px 0 0;
+
+  color: var(--text-muted);
+
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   ADD COURSE BUTTON
+===================================================== */
+
+.add-course-btn {
+  flex-shrink: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: var(--primary);
+
+  color: white;
+
+  padding: 15px 25px;
+
+  min-width: 155px;
+
+  border-radius: 11px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 16px rgba(0, 105, 92, 0.18);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.add-course-btn:hover {
+  background: var(--primary-dark);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 24px rgba(0, 105, 92, 0.25);
+}
+
+
+.add-course-btn:active {
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.instructor-stats {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto 45px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+.instructor-stat-card {
+  min-height: 105px;
+
+  padding: 20px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  box-shadow: var(--shadow-sm);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.instructor-stat-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =====================================================
+   STAT ICON
+===================================================== */
+
+.stat-icon {
+  width: 55px;
+
+  height: 55px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--accent-light);
+
+  border-radius: 14px;
+
+  font-size: 27px;
+}
+
+
+.instructor-stat-card span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--text-muted);
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+
+.instructor-stat-card strong {
+  display: block;
+
+  color: var(--text-dark);
+
+  font-size: 25px;
+
+  line-height: 1.1;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   MY COURSES SECTION
+===================================================== */
+
+.my-courses-section {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+
+.section-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+}
+
+
+.section-heading h2 {
+  margin: 0;
+
+  color: var(--text-dark);
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+
+.section-heading p {
+  margin: 5px 0 0;
+
+  color: var(--text-muted);
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   MANAGE COURSES BUTTON
+===================================================== */
+
+.manage-courses-link {
+  border: 1.5px solid var(--primary);
+
+  outline: none;
+
+  background: white;
+
+  color: var(--primary);
+
+  padding: 11px 19px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.manage-courses-link:hover {
+  background: var(--primary);
+
+  color: white;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 16px rgba(0, 105, 92, 0.18);
+}
+
+
+/* =====================================================
+   COURSE GRID
+===================================================== */
+
+.instructor-course-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+/* =====================================================
+   COURSE CARD
+===================================================== */
+
+.instructor-course-card {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  min-height: 240px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.instructor-course-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =====================================================
+   COURSE CARD TOP
+===================================================== */
+
+.course-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+
+.course-icon {
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--accent-light);
+
+  border-radius: 13px;
+
+  font-size: 26px;
+}
+
+
+.course-label {
+  padding: 5px 9px;
+
+  background: var(--primary-light);
+
+  color: var(--primary);
+
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   COURSE TITLE
+===================================================== */
+
+.instructor-course-card h3 {
+  margin: 0 0 9px;
+
+  color: var(--text-dark);
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+
+.instructor-course-card > p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  flex: 1;
+}
+
+
+/* =====================================================
+   COURSE FOOTER
+===================================================== */
+
+.course-card-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 22px;
+
+  padding-top: 17px;
+
+  border-top: 1px solid var(--border);
+}
+
+
+.course-card-footer span {
+  color: var(--text-muted);
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+
+.course-card-footer button {
+  border: none;
+
+  background: transparent;
+
+  color: var(--primary);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  padding: 5px 0;
+
+  transition: 0.2s ease;
+}
+
+
+.course-card-footer button:hover {
+  color: var(--primary-dark);
+
+  transform: translateX(3px);
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-course-state {
+  width: 100%;
+
+  padding: 65px 25px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: var(--surface);
+
+  border: 1px dashed #b8cbc5;
+
+  border-radius: 18px;
+}
+
+
+.empty-course-icon {
+  width: 65px;
+
+  height: 65px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--primary-light);
+
+  border-radius: 16px;
+
+  font-size: 30px;
+}
+
+
+.empty-course-state h3 {
+  margin: 0 0 8px;
+
+  color: var(--text-dark);
+
+  font-size: 23px;
+}
+
+
+.empty-course-state p {
+  margin: 0 0 22px;
+
+  color: var(--text-muted);
+}
+
+
+/* =====================================================
+   SECONDARY ADD COURSE BUTTON
+===================================================== */
+
+.add-course-btn.secondary {
+  display: inline-block;
+
+  min-width: 220px;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.dashboard-message {
+  width: 100%;
+
+  padding: 55px 20px;
+
+  text-align: center;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  color: var(--text-muted);
+
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .instructor-dashboard {
+    padding: 35px 30px 60px;
+  }
+
+  .instructor-hero {
+    padding: 35px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .instructor-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .instructor-course-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .instructor-dashboard {
+    padding: 30px 22px 50px;
+  }
+
+  .instructor-hero {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    min-height: auto;
+
+    padding: 30px;
+  }
+
+  .add-course-btn {
+    width: auto;
+  }
+
+  .instructor-course-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+  .instructor-dashboard {
+    padding: 20px 15px 40px;
+  }
+
+  .instructor-hero {
+    padding: 25px;
+
+    border-radius: 18px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .add-course-btn {
+    width: 100%;
+  }
+
+  .instructor-stats {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .section-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .manage-courses-link {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .instructor-course-card {
+    padding: 21px;
+  }
+}

@@ -1,0 +1,636 @@
+/* =====================================================
+   MANAGE COURSES PAGE
+===================================================== */
+
+.manage-courses-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--background);
+
+  padding: 45px 50px 70px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.manage-courses-content {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.manage-courses-hero {
+  width: 100%;
+
+  min-height: 225px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding: 42px 48px;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    135deg,
+    #e8f3ef,
+    #dceee8
+  );
+
+  border: 1px solid #d4e3de;
+
+  border-radius: 24px;
+
+  margin-bottom: 45px;
+}
+
+
+/* Hero text */
+
+.manage-hero-content {
+  flex: 1;
+}
+
+
+.manage-tag {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: var(--primary);
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.manage-hero-content h1 {
+  margin: 0;
+
+  color: var(--text-dark);
+
+  font-size: 43px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+}
+
+
+.manage-hero-content h1 span {
+  color: var(--primary);
+}
+
+
+.manage-hero-content p {
+  margin: 12px 0 0;
+
+  color: var(--text-muted);
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   HERO ADD COURSE BUTTON
+===================================================== */
+
+.manage-add-course-btn {
+  flex-shrink: 0;
+
+  border: none;
+
+  background: var(--primary);
+
+  color: white;
+
+  padding: 15px 24px;
+
+  min-width: 155px;
+
+  border-radius: 11px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0, 105, 92, 0.18);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.manage-add-course-btn:hover {
+  background: var(--primary-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(0, 105, 92, 0.25);
+}
+
+
+/* =====================================================
+   COURSE SECTION
+===================================================== */
+
+.manage-course-section {
+  width: 100%;
+}
+
+
+.manage-section-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+
+.manage-section-header h2 {
+  margin: 0;
+
+  color: var(--text-dark);
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+
+.manage-section-header p {
+  margin: 5px 0 0;
+
+  color: var(--text-muted);
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   COURSE GRID
+===================================================== */
+
+.manage-course-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+
+  align-items: stretch;
+}
+
+
+/* =====================================================
+   COURSE CARD
+===================================================== */
+
+.manage-course-card {
+  min-width: 0;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  box-shadow: var(--shadow-sm);
+
+  display: flex;
+
+  flex-direction: column;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.manage-course-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--shadow-md);
+
+  border-color: #c4d9d3;
+}
+
+
+/* =====================================================
+   COURSE CARD TOP
+===================================================== */
+
+.manage-course-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+
+.manage-course-icon {
+  width: 55px;
+
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--accent-light);
+
+  border-radius: 14px;
+
+  font-size: 27px;
+}
+
+
+.manage-course-top span {
+  color: var(--text-muted);
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   COURSE INFORMATION
+===================================================== */
+
+.manage-course-info {
+  flex: 1;
+}
+
+
+.manage-course-info h3 {
+  margin: 0 0 9px;
+
+  color: var(--text-dark);
+
+  font-size: 23px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+
+.manage-course-info p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  min-height: 48px;
+}
+
+
+/* =====================================================
+   COURSE DETAILS
+===================================================== */
+
+.manage-course-details {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin-top: 23px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid var(--border);
+}
+
+
+.manage-course-details div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.manage-course-details span {
+  color: var(--text-muted);
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+
+.manage-course-details strong {
+  color: var(--text-dark);
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   COURSE ACTION BUTTONS
+===================================================== */
+
+.manage-course-actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 20px;
+}
+
+
+/* Edit button */
+
+.manage-edit-btn {
+  border: none;
+
+  background: var(--primary);
+
+  color: white;
+
+  padding: 12px 15px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+
+.manage-edit-btn:hover {
+  background: var(--primary-dark);
+
+  transform: translateY(-1px);
+}
+
+
+/* Students button */
+
+.manage-students-btn {
+  border: 1.5px solid var(--primary);
+
+  background: white;
+
+  color: var(--primary);
+
+  padding: 11px 15px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+
+.manage-students-btn:hover {
+  background: var(--primary-light);
+
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   LOADING MESSAGE
+===================================================== */
+
+.manage-message {
+  width: 100%;
+
+  padding: 60px 20px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  color: var(--text-muted);
+
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.manage-empty-state {
+  width: 100%;
+
+  padding: 65px 25px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: var(--surface);
+
+  border: 1px dashed #b8cbc5;
+
+  border-radius: 18px;
+}
+
+
+.manage-empty-icon {
+  width: 65px;
+
+  height: 65px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--primary-light);
+
+  border-radius: 16px;
+
+  font-size: 30px;
+}
+
+
+.manage-empty-state h3 {
+  margin: 0 0 8px;
+
+  color: var(--text-dark);
+
+  font-size: 23px;
+}
+
+
+.manage-empty-state p {
+  margin: 0 0 22px;
+
+  color: var(--text-muted);
+}
+
+
+/* =====================================================
+   EMPTY STATE BUTTON
+===================================================== */
+
+.manage-add-course-btn.secondary {
+  min-width: 210px;
+}
+
+
+/* =====================================================
+   RESPONSIVE — TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .manage-courses-page {
+    padding: 35px 30px 60px;
+  }
+
+  .manage-courses-hero {
+    padding: 35px;
+  }
+
+  .manage-course-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE — SMALL TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .manage-courses-page {
+    padding: 30px 22px 50px;
+  }
+
+  .manage-courses-hero {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 30px;
+
+    min-height: auto;
+  }
+
+  .manage-add-course-btn {
+    width: auto;
+  }
+
+  .manage-course-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE — MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+  .manage-courses-page {
+    padding: 20px 15px 40px;
+  }
+
+  .manage-courses-hero {
+    padding: 25px;
+
+    border-radius: 18px;
+
+    margin-bottom: 30px;
+  }
+
+  .manage-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .manage-hero-content p {
+    font-size: 14px;
+  }
+
+  .manage-add-course-btn {
+    width: 100%;
+  }
+
+  .manage-section-header h2 {
+    font-size: 25px;
+  }
+
+  .manage-course-card {
+    padding: 21px;
+  }
+
+  .manage-course-actions {
+    grid-template-columns: 1fr;
+  }
+
+}
